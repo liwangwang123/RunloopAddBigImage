@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RunloopAddBigImage/ViewController.m"
+            timestampString = "550140925.296818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController tableView:cellForRowAtIndexPath:]"
+                  moduleName = "RunloopAddBigImage"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemo/Desktop/30-Swift-Project/RunloopAddBigImage/RunloopAddBigImage/ViewController.m"
+                  timestampString = "550140705.301819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__50-[ViewController tableView:cellForRowAtIndexPath:]_block_invoke"
+                  moduleName = "RunloopAddBigImage"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemo/Desktop/30-Swift-Project/RunloopAddBigImage/RunloopAddBigImage/ViewController.m"
+                  timestampString = "550140705.303862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
