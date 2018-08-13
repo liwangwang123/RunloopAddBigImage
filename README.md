@@ -66,6 +66,7 @@ number:555834104.571263
 
 ##### 在Run Loops中调度计时器
 
-可以一次只在一个 run loop 中注册一个计时器，尽管它可以添加到运行循环中的多个运行循环模式中。有三种方法来创建计时器:
+可以一次只在一个 run loop 中注册一个计时器，尽管它可以添加到运行循环中的多个运行循环模式中。
+有三种方法来创建计时器:
 用 [scheduledTimer(timeInterval:invocation:repeats:)](https://developer.apple.com/documentation/foundation/timer)或者[scheduledTimer(timeInterval:target:selector:userInfo:repeats:)](https://developer.apple.com/documentation/foundation/timer)
 类方法来创建计时器，并在当前 run loop 中以默认模式对其进行调度。
