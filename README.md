@@ -27,4 +27,4 @@ Timer
 
 概述
 定时器与run loop一起工作。run loop维护对其计时器的强引用，因此在将计时器添加到run loop后，您不必维护自己对计时器的强引用。
-要有效地使用计时器，您应该知道run loops是如何操作的。有关更多信息，请参阅"线程编程指南"。[线程编程指南](https://developer.apple.com/documentation/foundation/timer)
+要有效地使用计时器，您应该知道run loops是如何操作的。有关更多信息，请参阅[线程编程指南](https://developer.apple.com/documentation/foundation/timer)
