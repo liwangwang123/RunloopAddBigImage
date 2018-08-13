@@ -75,3 +75,7 @@ number:555834104.571263
 类方法创建计时器对象没有把它调度到run loop上。(在创建它之后，您必须通过对应的RunLoop对象调用[add(_:forMode:)](https://developer.apple.com/documentation/foundation/timer)方法。)
 
 - 分配空间并初始化用 [init(fireAt:interval:target:selector:userInfo:repeats:)](https://developer.apple.com/documentation/foundation/timer)方法。(在创建它之后，您必须通过对应的RunLoop对象调用[add(_:forMode:)](https://developer.apple.com/documentation/foundation/timer)方法。)
+
+一旦在 run loop 上调度，计时器将在指定的时间间隔触发，直到它失效。非重复计时器在触发后立即失效。但是，对于重复计时器，您必须通过调用其invalidate()方法使计时器对象自己失效。调用此方法要求从当前 run loop 中删除计时器;因此，您应该总是在创建计时器的线程中调用invalidate()方法。销毁计时器使其立即失效，不再影响 run loop 。然后run loop 删除计时器(以及它对计时器的强烈引用)要么就在invalidate()方法返回之前，要么就在稍后的某个时候。一旦失效，计时器对象就不能被重用。
+
+在重复的计时器触发后，它会在指定的公差范围内为最近的未来日期安排下一次触发，该日期是上一次预定的触发日期之后的计时器间隔的整数倍。如果调用执行选择器或调用所花费的时间超过指定的时间间隔，则计时器只安排下一次触发;也就是说，计时器不会试图补偿在调用指定的选择器或调用时可能发生的任何遗漏的触发。
