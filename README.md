@@ -60,12 +60,18 @@ number:555834081.408324
 number:555834086.551873
 number:555834091.551736
 number:555834095.84592
-number:555834099.571294
+number:555834099.571294对应的RunLoop对象。
 number:555834104.571263
 ```
 
 ##### 在Run Loops中调度计时器
 
 可以一次只在一个 run loop 中注册一个计时器，尽管它可以添加到 run loop 中的多个运行循环模式中。有三种方法来创建计时器:
+
 - 用 [scheduledTimer(timeInterval:invocation:repeats:)](https://developer.apple.com/documentation/foundation/timer)或者[scheduledTimer(timeInterval:target:selector:userInfo:repeats:)](https://developer.apple.com/documentation/foundation/timer)
 类方法来创建计时器，并在当前 run loop 中以默认模式对其进行调度。
+
+- 用 [init(timeInterval:invocation:repeats:)](https://developer.apple.com/documentation/foundation/timer)或者[init(timeInterval:target:selector:userInfo:repeats:) ](https://developer.apple.com/documentation/foundation/timer)
+类方法创建计时器对象没有把它调度到run loop上。(在创建它之后，您必须通过对应的RunLoop对象调用[add(_:forMode:)](https://developer.apple.com/documentation/foundation/timer)方法。)
+
+- 分配空间并初始化用 [init(fireAt:interval:target:selector:userInfo:repeats:)](https://developer.apple.com/documentation/foundation/timer)方法。(在创建它之后，您必须通过对应的RunLoop对象调用[add(_:forMode:)](https://developer.apple.com/documentation/foundation/timer)方法。)
